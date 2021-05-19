@@ -106,10 +106,26 @@ const btnCat = document.querySelector(".cat-fade");
 //   onRepeat: () => console.log("Répétition"),
 // });
 
-const complete = () => console.log("Terminé");
+// const complete = () => console.log("Terminé");
+// gsap.to(".container-images img:nth-child(2)", {
+//   y: 100,
+//   repeat: 1,
+//   onComplete: complete,
+// });
 
-gsap.to(".container-images img:nth-child(2)", {
-  y: 100,
-  repeat: 1,
-  onComplete: complete,
+/* RECORD TWEENS */
+gsap.registerEffect({
+  name: "imgCrazy",
+  effect: (targets, config) => {
+    return gsap.to(targets, {
+      duration: config.duration,
+      y: 200,
+      scale: 1.4,
+      rotation: 360,
+    });
+  },
+  defaults: { duration: 2 },
 });
+
+gsap.effects.imgCrazy(catImage, { duration: 5 });
+gsap.effects.imgCrazy(".container-images img:nth-child(2)");

@@ -7,8 +7,22 @@ const btnCat = document.querySelector(".cat-fade");
 
 // gsap.from(catImage, { opacity: 0, duration: 3 });
 
-btnCat.addEventListener("click", () => {
-  //   gsap.from(catImage, { opacity: 0, duration: 3 });
+// btnCat.addEventListener("click", () => {
+//     gsap.from(catImage, { opacity: 0, duration: 3 });
+//   });
 
-  gsap.fromTo(catImage, { opacity: 0 }, { opacity: 1, duration: 3 });
+// btnCat.addEventListener("click", () => {
+//   gsap.fromTo(catImage, { opacity: 0 }, { opacity: 1, duration: 3 });
+// });
+
+btnCat.addEventListener("click", () => {
+  gsap.to(catImage, {
+    x: 100,
+    y: 100,
+    scale: 2,
+    duration: 2,
+    delay: 0.2,
+    repeat: 1,
+    repeatDelay: 2,
+  });
 });

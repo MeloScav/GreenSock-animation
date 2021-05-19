@@ -88,10 +88,28 @@ const btnCat = document.querySelector(".cat-fade");
 // });
 
 /* KEYFRAMES */
+// gsap.to(".container-images img:nth-child(2)", {
+//   keyframes: [
+//     { duration: 0.3, y: 100 },
+//     { duration: 0.3, scale: 1.3 },
+//     { duration: 0.3, y: 200 },
+//   ],
+// });
+
+/* callback functions */
+// gsap.to(".container-images img:nth-child(2)", {
+//   y: 100,
+//   repeat: 1,
+//   onComplete: () => console.log("Terminé"),
+//   onStart: () => console.log("Démarrage"),
+//   onUpdate: () => console.log("Animation en cours"),
+//   onRepeat: () => console.log("Répétition"),
+// });
+
+const complete = () => console.log("Terminé");
+
 gsap.to(".container-images img:nth-child(2)", {
-  keyframes: [
-    { duration: 0.3, y: 100 },
-    { duration: 0.3, scale: 1.3 },
-    { duration: 0.3, y: 200 },
-  ],
+  y: 100,
+  repeat: 1,
+  onComplete: complete,
 });

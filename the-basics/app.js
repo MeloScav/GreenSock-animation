@@ -131,4 +131,20 @@ const btnCat = document.querySelector(".cat-fade");
 // gsap.effects.imgCrazy(".container-images img:nth-child(2)");
 
 /* .set() method */
-gsap.set(catImage, { opacity: 0 });
+// gsap.set(catImage, { opacity: 0 });
+
+/* YOYO AND TWEENS METHOD */
+const anim = gsap.to(catImage, { y: 250, yoyo: true, repeat: 1 });
+
+anim.delay(1);
+// anim.duration(5);
+anim.duration(1);
+anim.pause();
+// anim.resume();
+// anim.kill();
+// anim.seek(2.5);
+anim.resume();
+
+setTimeout(() => {
+  anim.restart();
+}, 3000);

@@ -22,6 +22,9 @@ img {
   height: auto;
   flex-shrink: 1;
   margin: 20px;
+  opacity: 0;
+  transform: translateY(-30px);
+  visibility: hidden;
 }
 
 h1,
@@ -29,6 +32,9 @@ p {
   text-align: center;
   color: #f1f1f1;
   line-height: 1.2;
+  opacity: 0;
+  transform: translateY(-30px);
+  visibility: hidden;
 }
 h1 {
   margin-top: 100px;

@@ -81,8 +81,17 @@ const btnCat = document.querySelector(".cat-fade");
 /* RANDOM */
 // gsap.to(".btn", { duration: 0.2, x: "random(-100, 100)", stagger: 0.1 });
 // gsap.to(".btn", { duration: 0.2, x: "random(-100, 100, 10)", stagger: 0.1 });
-gsap.to(".btn", {
-  duration: 0.2,
-  x: "random([50, 30, -30, 80])",
-  stagger: 0.1,
+// gsap.to(".btn", {
+//   duration: 0.2,
+//   x: "random([50, 30, -30, 80])",
+//   stagger: 0.1,
+// });
+
+/* KEYFRAMES */
+gsap.to(".container-images img:nth-child(2)", {
+  keyframes: [
+    { duration: 0.3, y: 100 },
+    { duration: 0.3, scale: 1.3 },
+    { duration: 0.3, y: 200 },
+  ],
 });

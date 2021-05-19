@@ -114,18 +114,21 @@ const btnCat = document.querySelector(".cat-fade");
 // });
 
 /* RECORD TWEENS */
-gsap.registerEffect({
-  name: "imgCrazy",
-  effect: (targets, config) => {
-    return gsap.to(targets, {
-      duration: config.duration,
-      y: 200,
-      scale: 1.4,
-      rotation: 360,
-    });
-  },
-  defaults: { duration: 2 },
-});
+// gsap.registerEffect({
+//   name: "imgCrazy",
+//   effect: (targets, config) => {
+//     return gsap.to(targets, {
+//       duration: config.duration,
+//       y: 200,
+//       scale: 1.4,
+//       rotation: 360,
+//     });
+//   },
+//   defaults: { duration: 2 },
+// });
 
-gsap.effects.imgCrazy(catImage, { duration: 5 });
-gsap.effects.imgCrazy(".container-images img:nth-child(2)");
+// gsap.effects.imgCrazy(catImage, { duration: 5 });
+// gsap.effects.imgCrazy(".container-images img:nth-child(2)");
+
+/* .set() method */
+gsap.set(catImage, { opacity: 0 });

@@ -38,9 +38,42 @@ const btnCat = document.querySelector(".cat-fade");
 //   duration: 2,
 //   ease: "power1.in",
 // });
-gsap.to(".container-images img", {
-  y: 300,
-  scale: 1.2,
-  duration: 2,
-  ease: "bounce.out",
-});
+
+// gsap.to(".container-images img", {
+//   y: 300,
+//   scale: 1.2,
+//   duration: 2,
+//   ease: "bounce.out",
+// });
+
+/* STAGGER */
+// gsap.to(".container-images img", {
+//   y: 300,
+//   scale: 1.2,
+//   duration: 2,
+//   ease: "power1",
+//   stagger: 0.1,
+// });
+
+// gsap.to(".container-images img", {
+//   y: 300,
+//   scale: 1.2,
+//   duration: 2,
+//   ease: "power1",
+//   stagger: {
+//     each: 0.5,
+//     from: "center",
+//   },
+// });
+
+// gsap.to(".container-images img", {
+//   y: 300,
+//   scale: 1.2,
+//   duration: 2,
+//   ease: "power1",
+//   stagger: function (index) {
+//     return index * 0.5;
+//   },
+// });
+
+gsap.to(".container-btns button", { duration: 0.2, x: 50, stagger: 0.2 });

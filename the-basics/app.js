@@ -8,5 +8,7 @@ const btnCat = document.querySelector(".cat-fade");
 // gsap.from(catImage, { opacity: 0, duration: 3 });
 
 btnCat.addEventListener("click", () => {
-  gsap.from(catImage, { opacity: 0, duration: 3 });
+  //   gsap.from(catImage, { opacity: 0, duration: 3 });
+
+  gsap.fromTo(catImage, { opacity: 0 }, { opacity: 1, duration: 3 });
 });

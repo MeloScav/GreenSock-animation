@@ -17,6 +17,6 @@ const TL = gsap.timeline();
 
 TL.to(catImage, { autoAlpha: 1, y: 0, duration: 1 })
   .to(mountainImage, { autoAlpha: 1, y: 0, duration: 1 })
-  .to(iceCreamImage, { autoAlpha: 1, y: 0, duration: 1 })
+  .to(iceCreamImage, { autoAlpha: 1, y: 0, duration: 1 }, 0)
   .to(title, { autoAlpha: 1, y: 0, duration: 1 })
   .to(txt, { autoAlpha: 1, y: 0, duration: 1 });

@@ -15,8 +15,8 @@ const TL = gsap.timeline();
 //   .to(iceCreamImage, { opacity: 1, y: 0 })
 //   .to(title, { opacity: 1, y: 0 });
 
-TL.to(catImage, { autoAlpha: 1, y: 0, duration: 1 })
-  .to(mountainImage, { autoAlpha: 1, y: 0, duration: 1 }, "-=0.75")
-  .to(iceCreamImage, { autoAlpha: 1, y: 0, duration: 1 }, "-=0.75")
-  .to(title, { autoAlpha: 1, y: 0, duration: 1 }, "-=0.75")
-  .to(txt, { autoAlpha: 1, y: 0, duration: 1 }, "-=0.75");
+TL.to(catImage, { autoAlpha: 1, y: 0, duration: 1 }, 1)
+  .to(mountainImage, { autoAlpha: 1, y: 0, duration: 1 }, 0)
+  .to(iceCreamImage, { autoAlpha: 1, y: 0, duration: 1 }, ">");
+// .to(title, { autoAlpha: 1, y: 0, duration: 1 }, "-=0.75")
+// .to(txt, { autoAlpha: 1, y: 0, duration: 1 }, "-=0.75");

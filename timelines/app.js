@@ -32,11 +32,25 @@ const TL = gsap.timeline({
   paused: true,
 });
 
+// TL.to(catImage, { autoAlpha: 1, y: 0 })
+//   .to(mountainImage, { autoAlpha: 1, y: 0 })
+//   .to(iceCreamImage, { autoAlpha: 1, y: 0 })
+//   .to(title, { autoAlpha: 1, y: 0 })
+//   .addLabel("endAnim")
+//   .to(txt, { autoAlpha: 1, y: 0 });
+
+// setTimeout(() => {
+//   TL.play("endAnim");
+// }, 1000);
+
 TL.to(catImage, { autoAlpha: 1, y: 0 })
-  .to(mountainImage, { autoAlpha: 1, y: 0 }, "-=0.75")
-  .to(iceCreamImage, { autoAlpha: 1, y: 0 }, "-=0.75")
-  .to(title, { autoAlpha: 1, y: 0 }, "-=0.75")
-  .to(txt, { autoAlpha: 1, y: 0 }, "-=0.75");
+  .to(mountainImage, { autoAlpha: 1, y: 0 })
+  .to(iceCreamImage, { autoAlpha: 1, y: 0 })
+  .to(title, { autoAlpha: 1, y: 0 })
+  .add(() => {
+    console.log("Fin de timeline");
+  })
+  .to(txt, { autoAlpha: 1, y: 0 });
 
 setTimeout(() => {
   TL.play();

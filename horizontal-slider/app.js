@@ -9,10 +9,25 @@ let index = 0;
 const animRight = () => {
   const TLRight = gsap.timeline();
 
-  TLRight.to(allSlides[index], { duration: 0.6, x: 0 });
+  TLRight.set(indexIndic, { innerText: index + 1 }).to(allSlides[index], {
+    duration: 0.6,
+    x: 0,
+  });
 };
 
 btnRight.addEventListener("click", () => {
+  if (index === 2) {
+    gsap.to(container, {
+      keyframes: [
+        { duration: 0.1, x: -4 },
+        { duration: 0.1, x: 4 },
+        { duration: 0.1, x: -4 },
+        { duration: 0.1, x: 0 },
+      ],
+    });
+    return;
+  }
+
   index++;
   animRight();
 });
